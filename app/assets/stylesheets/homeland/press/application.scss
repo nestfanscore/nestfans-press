@@ -52,14 +52,34 @@
       .counter { font-size: 14px; }
     }
 
-    .post-title { font-size: 18px; line-height: 22px; margin-bottom: 0px; }
+    .post-cover {
+      width: 300px;
+      min-width: 300px;
+      height: 200px;
+      background: rgba(0,0,0,0.1);
+      border: 1px solid rgba(143,154,170,0.3);
+      border-radius: 8px;
+    }
+
+    .media-body { 
+      flex: 1;
+      margin-left: 1.3em;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+    .post-title { font-size: 20px; line-height: 30px; margin-bottom: 0px; }
     .post-summary {
       padding: 10px 0;
       font-size: 14px; color: #888;
+      min-height: 108px;
     }
     .post-info {
       color: #aaa;
       font-size: 12px;
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
       a { color: #aaa; }
     }
 
