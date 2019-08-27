@@ -25,6 +25,28 @@ window.PostView = Backbone.View.extend
       $('#preview').html(data)
       false
     false
+  
+  uploadFile: (item, filename) ->
+    self = @
+    formData = new FormData()
+    formData.append "file", item, filename
+    $.ajax
+      url: '/photos'
+      type: "POST"
+      data: formData
+      dataType: "JSON"
+      processData: false
+      contentType: false
+      beforeSend: ->
+        self.showUploading()
+      success: (e, status, res) ->
+        self.appendImageFromUpload([res.responseJSON.url])
+        self.restoreUploaderStatus()
+      error: (res) ->
+        App.alert("上传失败")
+        self.restoreUploaderStatus()
+      complete: ->
+        self.restoreUploaderStatus()
 
 document.addEventListener 'turbolinks:load',  ->
   window._postView = new PostView()

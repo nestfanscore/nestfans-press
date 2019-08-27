@@ -21,9 +21,9 @@
     }
 
     .post {
-      margin: 0 -15px;
-      padding: 0 15px 15px 15px;
-      margin-bottom: 15px;
+      // margin: 0 -15px;
+      padding: 25px 15px 25px 15px;
+      // margin-bottom: 15px;
       border-bottom: 1px solid #eee;
 
       @media (max-width: 480px) {
@@ -76,7 +76,7 @@
     }
     .post-info {
       color: #aaa;
-      font-size: 12px;
+      font-size: 14px;
       display: flex;
       align-items: flex-end;
       height: 100%;

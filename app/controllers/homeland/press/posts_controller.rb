@@ -5,11 +5,11 @@ module Homeland::Press
 
     # GET /posts
     def index
-      @posts = Post.includes(:user).published.order('published_at desc, id desc').page(params[:page]).per(10)
+      @posts = Post.includes(:user).published.order('published_at desc, id desc').page(params[:page]).per(5)
     end
 
     def upcoming
-      @posts = Post.includes(:user).upcoming.order('id desc').page(params[:page]).per(10)
+      @posts = Post.includes(:user).upcoming.order('id desc').page(params[:page]).per(5)
     end
 
     # GET /posts/1
@@ -77,7 +77,7 @@ module Homeland::Press
 
       # Only allow a trusted parameter "white list" through.
       def post_params
-        params.require(:post).permit(:title, :slug, :body, :summary)
+        params.require(:post).permit(:title, :slug, :body, :summary, :banner)
       end
   end
 end
