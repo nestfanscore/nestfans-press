@@ -7,6 +7,12 @@ window.PostView = Backbone.View.extend
   initialize: (opts) ->
     $("<div id='preview' class='markdown form-control' style='display:none;'></div>").insertAfter( $('#post_body') )
     window._editor = new Editor()
+    title = $('#post-detail > div > h1').text()
+    $('title').text(title)
+    $("meta[property='og:title']").attr('content', title);
+    summary = $('#post_summary').text()
+    $("meta[name='description']").attr('content', summary);
+    $("meta[property='og:description']").attr('content', summary);
 
   toggleEditView: (e) ->
     $(e.target).parent().addClass('active')

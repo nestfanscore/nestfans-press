@@ -29,6 +29,7 @@
       <%= @post.hits %> 次阅读 ·
       <a href="#comments"><i class="fa fa-comments-o"></i> <%= @post.comments_count %> 条评论</a>
     </div>
+    <p id="post_summary" style="display:none"><%= @post.summary %></p>
     <div class="post-body markdown">
       <%= markdown @post.body %>
     </div>
