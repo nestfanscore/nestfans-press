@@ -23,7 +23,8 @@
     </div>
     <h1><%= @post.title %></h1>
     <div class="post-info">
-      <%= press_user_name_tag(@post.user) %> ·
+      来源：<%= @post.source %> ·
+      发布者：<%= press_user_name_tag(@post.user) %> ·
       <span class="time" title="发布时间"><i class="fa fa-clock-o"></i> <%= timeago @post.created_at %></span> ·
       <%= @post.hits %> 次阅读 ·
       <a href="#comments"><i class="fa fa-comments-o"></i> <%= @post.comments_count %> 条评论</a>

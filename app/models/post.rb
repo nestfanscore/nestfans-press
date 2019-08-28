@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   enum status: %i(upcoming published rejected)
 
   validates :slug, uniqueness: true, if: Proc.new { |post| post.slug.present? }
-  validates :title, :summary, :banner, :body, presence: true
+  validates :title, :summary, :source, :banner, :body, presence: true
 
   counter :hits
 

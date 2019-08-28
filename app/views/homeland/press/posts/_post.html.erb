@@ -9,13 +9,13 @@
       <%= simple_format post.summary %>
     </div>
     <div class="post-info">
-      <%= press_user_name_tag(post.user) %>
-      &nbsp; &nbsp;
       <span class="time" title="发布时间"><i class="fa fa-clock-o"></i> <%= timeago(post.created_at) %></span>
       &nbsp; &nbsp;
       <%= link_to "#{post.comments_count} 条评论", post_path(post, anchor: 'comments') %>
       &nbsp; &nbsp;
       <%= post.likes_count %>个赞
+      &nbsp; &nbsp;
+      <%= post.source %>
     </div>
     <% end %>
   </div>

@@ -77,7 +77,7 @@ module Homeland::Press
 
       # Only allow a trusted parameter "white list" through.
       def post_params
-        params.require(:post).permit(:title, :slug, :body, :summary, :banner)
+        params.require(:post).permit(:title, :slug, :source, :body, :summary, :banner)
       end
   end
 end

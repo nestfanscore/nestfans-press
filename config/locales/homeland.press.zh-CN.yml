@@ -10,6 +10,7 @@
         slug: Slug
         body: 正文
         summary: 摘要
+        source: 来源
   simple_form:
     hints:
       post:
@@ -17,6 +18,7 @@
         slug: "文章的 URL 名称，也可以保持为空，这样将会用文章编号代替，例如 /posts/this-is-slug-for-use"
         body: "用 Markdown 语法编写文章正文"
         summary: "如果可以的话，用一段简短的文字描述此文的重点内容"
+        source: "文章的来源"
     placeholders:
       post:
         slug: ""

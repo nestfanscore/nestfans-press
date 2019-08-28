@@ -12,6 +12,11 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :source %>
+    <%= f.text_field :source, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :summary %>
     <%= f.text_area :summary, class: "form-control" %>
   </div>
@@ -21,10 +26,10 @@
     <%= f.text_area :banner, class: "form-control" %>
   </div>
 
-  <div class="form-group">
-    <label for="upload_posts_cover_image">封面图(300x200)</label>
-    <input type="file" class="form-control-file" accept="image/png,image/jpg,image/jpeg,image/jpe" id="upload_posts_cover_image"">
-  </div>
+  # <div class="form-group">
+  #   <label for="upload_posts_cover_image">封面图(300x200)</label>
+  #   <input type="file" class="form-control-file" accept="image/png,image/jpg,image/jpeg,image/jpe" id="upload_posts_cover_image"">
+  # </div>
 
   <%= render "/shared/editor_toolbar" %>
 

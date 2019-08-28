@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
     create_table :posts do |t|
       t.string :title, null: false
       t.string :slug, null: false
+      t.string :source, null: false
       t.text :body, null: false
       t.string :summary, limit: 5000
       t.string :banner
