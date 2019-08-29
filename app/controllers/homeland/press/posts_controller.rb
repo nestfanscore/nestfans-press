@@ -5,11 +5,11 @@ module Homeland::Press
 
     # GET /posts
     def index
-      @posts = Post.includes(:user).published.order('published_at desc, id desc').page(params[:page]).per(5)
+      @posts = Post.includes(:user).published.order('published_at desc, id desc').page(params[:page]).per(8)
     end
 
     def upcoming
-      @posts = Post.includes(:user).upcoming.order('id desc').page(params[:page]).per(5)
+      @posts = Post.includes(:user).upcoming.order('id desc').page(params[:page]).per(8)
     end
 
     # GET /posts/1
