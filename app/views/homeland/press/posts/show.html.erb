@@ -32,7 +32,9 @@
     <div class="post-body markdown">
       <%= markdown @post.body %>
     </div>
-    <%= social_share_button_tag @post.title %>
+    <p class="post-flag">NEST爱好者社区 
+      <a class="post-flag" href="https://www.nestfans.com">https://www.nestfans.com</a>
+    </p>
     <div class="post-actions">
       <%= likeable_tag(@post, class: 'btn btn-lg btn-default') %>
 
